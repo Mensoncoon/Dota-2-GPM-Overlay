@@ -6,6 +6,7 @@ using System.IO;
 using System.Windows.Forms;
 using Dota2GSI;
 using Dota2GSI.Nodes;
+using System.IO.Ports;
 using DOTA_2_GPM_Overlay___Main.Properties;
 using MetroFramework.Forms;
 using Microsoft.Win32;
@@ -21,6 +22,7 @@ namespace DOTA_2_GPM_Overlay___Main
         private int selectedHeroId;
         private BenchmarkResult heroBenchmarkResult;
         private readonly OverlayForm overlayForm;
+        private LedCtrl LEDinter;
 
         public MainForm()
         {
@@ -28,6 +30,7 @@ namespace DOTA_2_GPM_Overlay___Main
             InitializeGameStateIntegration();
             overlayForm = new OverlayForm();
             StateLabel.Text = OverlayStatus.Status.Hidden.ToString();
+            LEDinter = new LedCtrl();
             InitializeNotifyIcon();
         }
 
@@ -97,7 +100,10 @@ namespace DOTA_2_GPM_Overlay___Main
                     var XPM = gamestate.Player.ExperiencePerMinute;
                     var GPMPercentile = heroBenchmarkResult.GetGPMPercentile(GPM);
                     var XPMPercentile = heroBenchmarkResult.GetXPMPercentile(XPM);
+                    var HealthP = gamestate.Hero.HealthPercent;
+                    var ManaP = gamestate.Hero.ManaPercent;
 
+                    LEDinter.writeHealthMana(HealthP, ManaP);
                     overlayForm.UpdateOverlay(GPM, XPM, GPMPercentile, XPMPercentile);
                     overlayForm.Show();
                     StateLabel.Text = OverlayStatus.Status.Visible.ToString();
@@ -227,5 +233,36 @@ namespace DOTA_2_GPM_Overlay___Main
 
             e.Graphics.DrawString(drawString, drawFont, drawBrush, drawPoint);
         }
+    }
+
+    public class LedCtrl
+    {
+        public SerialPort ComPort;
+        public byte[] LEDs;
+        public LedCtrl()
+        {
+            LEDs = new byte[96*3 + 1];
+            ComPort = new SerialPort();
+            ComPort.PortName = "COM7";
+            ComPort.BaudRate = 115200;
+            ComPort.Parity = Parity.None;
+            ComPort.DataBits = 8;
+            ComPort.StopBits = StopBits.One;
+            ComPort.Handshake = Handshake.None;
+            ComPort.Open();
+        }
+
+        public void writeHealthMana(int Health,int Mana)
+        {
+            LEDs[0] = (byte)Health;
+            LEDs[1] = (byte)Mana;
+            LEDs[2] = (byte)'\n';
+            ComPort.Write(LEDs, 0, 3);
+
+
+
+        }
+
+        
     }
 }

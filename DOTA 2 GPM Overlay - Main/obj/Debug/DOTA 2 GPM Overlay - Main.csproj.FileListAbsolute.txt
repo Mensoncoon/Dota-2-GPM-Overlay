@@ -1,0 +1,18 @@
+C:\GitHub\Dota-2-GPM-Overlay\DOTA 2 GPM Overlay - Main\bin\Debug\DOTA 2 GPM Overlay - Main.exe.config
+C:\GitHub\Dota-2-GPM-Overlay\DOTA 2 GPM Overlay - Main\bin\Debug\DOTA 2 GPM Overlay - Main.exe
+C:\GitHub\Dota-2-GPM-Overlay\DOTA 2 GPM Overlay - Main\bin\Debug\DOTA 2 GPM Overlay - Main.pdb
+C:\GitHub\Dota-2-GPM-Overlay\DOTA 2 GPM Overlay - Main\bin\Debug\Dota2GSI.dll
+C:\GitHub\Dota-2-GPM-Overlay\DOTA 2 GPM Overlay - Main\bin\Debug\MetroFramework.Design.dll
+C:\GitHub\Dota-2-GPM-Overlay\DOTA 2 GPM Overlay - Main\bin\Debug\MetroFramework.dll
+C:\GitHub\Dota-2-GPM-Overlay\DOTA 2 GPM Overlay - Main\bin\Debug\MetroFramework.Fonts.dll
+C:\GitHub\Dota-2-GPM-Overlay\DOTA 2 GPM Overlay - Main\bin\Debug\Newtonsoft.Json.dll
+C:\GitHub\Dota-2-GPM-Overlay\DOTA 2 GPM Overlay - Main\bin\Debug\RestSharp.dll
+C:\GitHub\Dota-2-GPM-Overlay\DOTA 2 GPM Overlay - Main\bin\Debug\Dota2GSI.xml
+C:\GitHub\Dota-2-GPM-Overlay\DOTA 2 GPM Overlay - Main\bin\Debug\Newtonsoft.Json.xml
+C:\GitHub\Dota-2-GPM-Overlay\DOTA 2 GPM Overlay - Main\bin\Debug\RestSharp.xml
+C:\GitHub\Dota-2-GPM-Overlay\DOTA 2 GPM Overlay - Main\obj\Debug\DOTA 2 GPM Overlay - Main.csprojResolveAssemblyReference.cache
+C:\GitHub\Dota-2-GPM-Overlay\DOTA 2 GPM Overlay - Main\obj\Debug\DOTA_2_GPM_Overlay___Main.MainForm.resources
+C:\GitHub\Dota-2-GPM-Overlay\DOTA 2 GPM Overlay - Main\obj\Debug\DOTA_2_GPM_Overlay___Main.Properties.Resources.resources
+C:\GitHub\Dota-2-GPM-Overlay\DOTA 2 GPM Overlay - Main\obj\Debug\DOTA 2 GPM Overlay - Main.csproj.GenerateResource.Cache
+C:\GitHub\Dota-2-GPM-Overlay\DOTA 2 GPM Overlay - Main\obj\Debug\DOTA 2 GPM Overlay - Main.exe
+C:\GitHub\Dota-2-GPM-Overlay\DOTA 2 GPM Overlay - Main\obj\Debug\DOTA 2 GPM Overlay - Main.pdb
